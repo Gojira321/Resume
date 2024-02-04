@@ -1,0 +1,48 @@
+body, html{
+  margin: 0;
+  background-color: #e7ebee;
+  font-family: Arial;
+}
+
+img {
+  width: 500px;
+  height: 340px;
+}
+
+.tablinks{
+  font: bold 1.2rem "Fira Sans", Arial;
+  background-color: #6ba8a8;
+  height: 50px;
+  border: none;
+  color: white;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  transition-duration: 0.3s;
+}
+
+.tablinks:hover{
+  background-color: #7a8a9f;
+}
+
+.content{
+  margin: 10%;
+}
+
+.tab{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: lightblue;
+}
+
+#main_page{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.contact_data{
+  text-align: center;
+}
