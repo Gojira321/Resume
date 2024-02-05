@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rubik:wght@300&family=Taviraj:wght@100;200&display=swap');
+
 body, html{
   margin: 0;
-  background-color: #e7ebee;
-  font-family: Arial;
+  background-color: #DAF0EE;
+  font-family: 'Rubik';
+  font-weight: light;
 }
 
 img {
@@ -10,8 +13,8 @@ img {
 }
 
 .tablinks{
-  font: bold 1.2rem "Fira Sans", Arial;
-  background-color: #6ba8a8;
+  font: bold 1.2rem "Fira Sans", Taviraj;
+  background-color: #230007;
   height: 50px;
   border: none;
   color: white;
@@ -22,18 +25,24 @@ img {
 }
 
 .tablinks:hover{
-  background-color: #7a8a9f;
+  background-color: #94D1BE;
 }
 
 .content{
+  font-style: 'Roboto';
   margin: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+
 }
 
 .tab{
+  padding-left: 10%;
+  padding-right: 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: lightblue;
+  background-color: #230007;
 }
 
 #main_page{
@@ -41,8 +50,4 @@ img {
   flex-direction: row;
   justify-content: space-around;
   gap: 30px;
-}
-
-.contact_data{
-  text-align: center;
 }
