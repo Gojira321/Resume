@@ -12,10 +12,19 @@ function openPage(pageName, elmnt, color) {
     tablinks[i].style.backgroundColor = "";
   }
 
-  // Show the specific tab content
-  document.getElementById(pageName).style.display = "block";
+  //var tempClassFadeIn = document.getElementById(pageName);
+  //tempClassFadeIn.add("fade");
+  //tempClassFadeIn.remove("fade");
 
+
+  // Show the specific tab content
+  //
+  //console.log(pageName);
+  document.getElementById(pageName).style.display = "block";
+  document.getElementById(pageName).style.visibility = "visible";
+  document.getElementById(pageName).classList.add("fade-in"); 
   // Add the specific color to the button used to open the tab content
+  //console.log(document.querySelector('.content'));
   elmnt.style.backgroundColor = color;
 }
 
