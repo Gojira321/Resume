@@ -17,6 +17,7 @@
 }
 
 body, html{
+  height: 75%;
   margin: 0;
   background-color: #DAF0EE;
   font-family: 'Rubik';
@@ -45,12 +46,23 @@ img {
   background-color: #94D1BE;
 }
 
+
 .content{
   font-style: 'Roboto';
   padding: 10%;
   padding-left: 20%;
   padding-right: 20%;
+  margin-bottom: 0px;/* Ensure the parent container has a defined height */
+  display: flex;
+  flex-direction: column;
+  height: 100%;  /* Change to column for vertical layout */
 }
+
+/* Add this style to make child elements stretch vertically */
+.content > * {
+  flex: 1;
+}
+
 
 .tab{
   padding-left: 10%;
@@ -61,14 +73,13 @@ img {
   background-color: #230007;
 }
 
+#skill_page, #project_page, #contact_page{
+    display: none;
+}
+
 #main_page{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 30px;
 }
-
-#skill_page, #project_page, #contact_page{
-    visibility: hidden;
-}
-

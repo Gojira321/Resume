@@ -1,8 +1,16 @@
+var lastPageName = "main_page";
+
 function openPage(pageName, elmnt, color) {
-  // Hide all elements with class="tabcontent" by default */
+  // Hide all elements with class="tabcontent" by default
   var i, tabcontent, tablinks;
+
+  if(lastPageName == pageName){
+    return;
+  }
+
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("fade-in");
     tabcontent[i].style.display = "none";
   }
 
@@ -12,21 +20,27 @@ function openPage(pageName, elmnt, color) {
     tablinks[i].style.backgroundColor = "";
   }
 
-  //var tempClassFadeIn = document.getElementById(pageName);
-  //tempClassFadeIn.add("fade");
-  //tempClassFadeIn.remove("fade");
-
+  // Show the specific tab content with fade-in effect
+  var contentContainer = document.getElementById("cont");
+  contentContainer.style.display = "block";
+  contentContainer.classList.remove("fade-in");
+  contentContainer.offsetWidth; // Trigger reflow to restart the animation
+  contentContainer.classList.add("fade-in");
 
   // Show the specific tab content
-  //
-  //console.log(pageName);
-  document.getElementById(pageName).style.display = "block";
-  document.getElementById(pageName).style.visibility = "visible";
-  document.getElementById(pageName).classList.add("fade-in"); 
+
+  if(pageName == "main_page"){
+    document.getElementById(pageName).style.display = "flex";
+  }
+  else{
+    document.getElementById(pageName).style.display = "flex";
+    document.getElementById(pageName).style.flexDirection = "column";
+  }
   // Add the specific color to the button used to open the tab content
-  //console.log(document.querySelector('.content'));
-  elmnt.style.backgroundColor = color;
+  elmnt.style.animation = "fade-in";
+  lastPageName = pageName;
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click(); 
+document.getElementById("defaultOpen").click();
+
